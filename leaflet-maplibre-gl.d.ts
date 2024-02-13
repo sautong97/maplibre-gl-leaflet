@@ -1,9 +1,9 @@
 import * as L from 'leaflet';
-import { Map, MapOptions } from 'maplibre-gl';
+import { Map, MapOptions as MapLibreGLOptions } from 'maplibre-gl';
 
 
 declare module 'leaflet' {
-    type LeafletMaplibreGLOptions = Omit<MapOptions, "container">;
+    type LeafletMaplibreGLOptions = Omit<MapLibreGLOptions, "container">;
 
     class MaplibreGL extends L.Layer {
         constructor(options: LeafletMaplibreGLOptions);
